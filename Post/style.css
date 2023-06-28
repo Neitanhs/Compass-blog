@@ -50,8 +50,7 @@ nav{
 /* ScrollBar */
 
 ::-webkit-scrollbar{    
-    color: white;    
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);   
+    color: white; 
  }
  
  ::-webkit-scrollbar-thumb {
@@ -65,23 +64,22 @@ nav{
      margin: 4em auto 1em auto
  
  }
+ 
 
- /* CONTENT */
-
-  
+ /* CONTENT */  
 
   .container-absolute{
     overflow-y: auto;
     height: 100vh;
-    
+        
 }
 
-.blog-heading{
+.post-heading{
     margin: 10.5em auto 4.5em 5em;      
     
 }
 
-.blog-heading span {
+.post-heading span {
     color: #3A4F9A;
     font-size: 36px;
     font-family: Inter;
@@ -92,3 +90,74 @@ nav{
     padding-bottom: 1em;  
     
 }
+
+#posts-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-right: 80px;
+}
+
+.post{
+    width: 520px;
+    height: autopx;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
+    margin: 0px 0 58px 79px;
+    padding-bottom: 20px;
+   
+    
+}
+
+.images-post {
+    width: 100%;
+    height: 273px;
+}
+
+.images-post img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+
+.post-text h3 {
+    color: #3A4F9A;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 2px;
+    margin: 20px 21px 15px 29px;
+}
+
+.post-text p {
+    color: #575757;
+    font-size: 13px;
+    font-family: Inter;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 1.3px;
+    margin: auto 21px 0 29px;
+    display: -webkit-box;    
+    -webkit-line-clamp: 4;
+    -webkit-box-orient:vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post-text a {
+    display: flex;
+    justify-content: flex-end;
+    color: #3A4F9A;
+    font-size: 13px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1.3px;
+    margin: auto 18px 2px auto;
+    
+}
+
