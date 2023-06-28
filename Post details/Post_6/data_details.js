@@ -98,86 +98,96 @@ var comments = [
     /* Post-details 4 */
     {
         id: 1,
-        postId: 1,
+        postId: 4,
         email: "isabella@gmail.com",
         body: "Spirited Away is a magical masterpiece! It transported me to a whole new world."
     },
     {
         id: 2,
-        postId: 1,
+        postId: 4,
         email: "lucas@gmail.com",
         body: "A beautiful and enchanting film! Spirited Away captured my heart."
     },
     {
         id: 3,
-        postId: 1,
+        postId: 4,
         email: "angel00@gmail.com",
         body: "Spirited Away is a true work of art. The animation and storytelling are mesmerizing."
     },
     /* Post-details 5 */
     {
         id: 1,
-        postId: 1,
+        postId: 5,
         email: "thomas@gmail.com",
         body: "Matrix blew my mind! The concept and action sequences were groundbreaking."
     },
     {
         id: 2,
-        postId: 1,
+        postId: 5,
         email: "carlos_slu@gmail.com",
         body: "The Matrix is a modern classic. It redefined the science fiction genre."
     },
     {
         id: 3,
-        postId: 1,
+        postId: 5,
         email: "morpheus@gmail.com",
         body: "I still remember the red pill/blue pill scene. Matrix is a must-watch."
     },
     /* Post-details 6 */
     {
         id: 1,
-        postId: 1,
+        postId: 6,
         email: "rafa_kepler@gmail.com",
         body: "Pulp Fiction is a cinematic masterpiece! Tarantino's writing is unmatched."
     },
     {
         id: 2,
-        postId: 1,
+        postId: 6,
         email: "mia@gmail.com",
         body: "The dialogue and non-linear storytelling make Pulp Fiction unforgettable."
     },
     {
         id: 3,
-        postId: 1,
+        postId: 6,
         email: "jules@gmail.com",
         body: "Pulp Fiction is a cultural phenomenon. The cast and soundtrack are incredible."
     },
 ];
 
-function renderPosts() {
-    const postsContainer = document.getElementById('posts-container');
-    let postHTML = '';
+function renderPost(postId) {
+    const post = posts.find((post) => post.id === postId);
   
-    posts.forEach((post) => {    
+    if (!post) {
+      console.error('Post not found.');
+      return;
+    }
   
-      // Criar o HTML do post
-      postHTML += `
-    <div class="post">
+    const postComments = comments.filter((comment) => comment.postId === postId);
+  
+    const postHTML = `
+    <a href="/Compass-blog/Post/index.html"  class="arrow-img">
+    <img src="/Compass-blog/img/ArrowIcon.png" alt="arrow">
+   </a>    
+  <div class="post">
         <div class="images-post">
-        <a href="/Compass-blog/Post details/Post_${post.id}/post-details-${post.id}.html">
-          <img src="${post.imageUrl}" alt="${post.title}" />
-          </a>
-       </div>
-    <div class="post-text">
-          <h3>${post.title}</h3>          
-          <p>${post.body}</p>
-          <a href="/Compass-blog/Post details/Post_${post.id}/post-details-${post.id}.html">Expand...</a>
-    </div>     
+        <img src="${post.imageUrl}" alt="${post.title}" />
         </div>
-      `;
-    });
+    <div class="post-text">
+        <h3>${post.title}</h3>          
+        <p>${post.body}</p>
+    </div>
+  </div>
+
+  <div class="comments-box">        
+        <ul>
+          ${postComments.map((comment) => `<li class="comments-text"><Strong>usuário_${comment.id} :${comment.email} : </Strong> ${comment.body}</li>`).join('')}
+        </ul>
+  </div>
+    `;
   
-    postsContainer.innerHTML = postHTML;
+    const postContainer = document.getElementById('post-container');
+    postContainer.innerHTML = postHTML;
   }
   
-  renderPosts();
+  // Exemplo de uso: renderizar o post com o postId 2
+  renderPost(6);
