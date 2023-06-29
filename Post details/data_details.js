@@ -1,10 +1,15 @@
 import {posts, comments} from '/Post/data/data.js'
 
-function renderPost(postId) {
-    const post = posts.find((post) => post.id === postId); 
-  
-    const postComments = comments.filter((comment) => comment.postId === postId);
-  
+// Função para renderizar um único post
+function renderSinglePost() {
+  const postContainer = document.getElementById('post-container');
+  const urlParams = new URLSearchParams(window.location.search);
+  const postId = urlParams.get('id');
+  const post = posts.find(post => post.id === parseInt(postId));
+  const postComments = comments.filter((comment) => comment.postId === parseInt(postId));
+
+
+  if (post) {
     const postHTML = `
     <a href="/Post/index.html"  class="arrow-img">
     <img src="/img/ArrowIcon.svg" alt="arrow">
@@ -25,10 +30,11 @@ function renderPost(postId) {
         </ul>
   </div>
     `;
-  
-    const postContainer = document.getElementById('post-container');
     postContainer.innerHTML = postHTML;
+  } else {
+    postContainer.innerHTML = 'Post not found.';
   }
-  
-  // Renderizando apenas o post 1
-  renderPost(1);
+}
+
+// Chama a função para renderizar o post
+renderSinglePost();
