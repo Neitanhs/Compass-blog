@@ -1,5 +1,5 @@
 "use strict";
-var posts = [
+export var posts = [
     {
         id: 1,
         title: "Spider-Man: Across the Spider-Verse",
@@ -37,7 +37,7 @@ var posts = [
         body: "Pulp Fiction is a Quentin Tarantino cult classic, known for its nonlinear storytelling and gritty dialogue. The film weaves interconnected stories of hitmen, boxers, and mobsters in Los Angeles. With a stellar ensemble cast and Tarantino's signature style, Pulp Fiction is an edgy and unforgettable cinematic experience."
     },
 ];
-var comments = [
+export var comments = [
     /* Post-details 1 */
     {
         id: 1,
@@ -98,88 +98,59 @@ var comments = [
     /* Post-details 4 */
     {
         id: 1,
-        postId: 1,
+        postId: 4,
         email: "isabella@gmail.com",
         body: "Spirited Away is a magical masterpiece! It transported me to a whole new world."
     },
     {
         id: 2,
-        postId: 1,
+        postId: 4,
         email: "lucas@gmail.com",
         body: "A beautiful and enchanting film! Spirited Away captured my heart."
     },
     {
         id: 3,
-        postId: 1,
+        postId: 4,
         email: "angel00@gmail.com",
         body: "Spirited Away is a true work of art. The animation and storytelling are mesmerizing."
     },
     /* Post-details 5 */
     {
         id: 1,
-        postId: 1,
+        postId: 5,
         email: "thomas@gmail.com",
         body: "Matrix blew my mind! The concept and action sequences were groundbreaking."
     },
     {
         id: 2,
-        postId: 1,
+        postId: 5,
         email: "carlos_slu@gmail.com",
         body: "The Matrix is a modern classic. It redefined the science fiction genre."
     },
     {
         id: 3,
-        postId: 1,
+        postId: 5,
         email: "morpheus@gmail.com",
         body: "I still remember the red pill/blue pill scene. Matrix is a must-watch."
     },
     /* Post-details 6 */
     {
         id: 1,
-        postId: 1,
+        postId: 6,
         email: "rafa_kepler@gmail.com",
         body: "Pulp Fiction is a cinematic masterpiece! Tarantino's writing is unmatched."
     },
     {
         id: 2,
-        postId: 1,
+        postId: 6,
         email: "mia@gmail.com",
         body: "The dialogue and non-linear storytelling make Pulp Fiction unforgettable."
     },
     {
         id: 3,
-        postId: 1,
+        postId: 6,
         email: "jules@gmail.com",
         body: "Pulp Fiction is a cultural phenomenon. The cast and soundtrack are incredible."
     },
 ];
 
-function renderPosts() {
-    const postsContainer = document.getElementById('posts-container');
-    let postHTML = '';
-  
-    posts.forEach((post) => {    
-  
-      // Criar o HTML do post
-      postHTML += `
-    <div class="post">
-        <div class="images-post">
-        <a href="/Post details/Post_${post.id}/post-details-${post.id}.html">
-          <img src="${post.imageUrl}" alt="${post.title}" />
-          </a>
-       </div>       
-    <div class="post-text">
-        <a href="/Post details/Post_${post.id}/post-details-${post.id}.html">
-          <h3>${post.title}</h3>          
-          <p>${post.body}</p>
-          <a class="link" href="/Post details/Post_${post.id}/post-details-${post.id}.html">Expand...</a>
-        </a>
-    </div>     
-        </div>
-      `;
-    });
-  
-    postsContainer.innerHTML = postHTML;
-  }
-  
-  renderPosts();
