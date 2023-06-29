@@ -42,6 +42,7 @@ nav{
 .text-nav{    
     font-size: 24px;
     font-weight: 600;
+    user-select:none;
 }
 .img-nav{
     width: 1.75em;
@@ -59,6 +60,11 @@ nav{
      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);  
     
  }
+
+ ::-webkit-scrollbar-thumb:active {    
+    background: rgba(58, 79, 154, 0.5);
+    
+}
  
  ::-webkit-scrollbar-track{
      margin: 4em auto 1em auto
@@ -88,6 +94,7 @@ nav{
     letter-spacing: 3.6px;   
     border-bottom: 3px solid #3A4F9A;
     padding-bottom: 1em;  
+    user-select:none;
     
 }
 
@@ -105,8 +112,12 @@ nav{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
     margin: 0px 0 58px 79px;
     padding-bottom: 20px;
-   
+    transition: 0.5s all ease;
     
+}
+
+.post:hover{
+    transform: scale(1.05);
 }
 
 .images-post {
@@ -131,7 +142,11 @@ nav{
     line-height: 20px;
     letter-spacing: 2px;
     margin: 20px 21px 15px 29px;
+    transition: all ease 0.5s;
 }
+.post-text h3:hover{
+    color:#e44848;    
+   }
 
 .post-text p {
     color: #575757;
@@ -146,9 +161,10 @@ nav{
     -webkit-box-orient:vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    user-select:none;
 }
 
-.post-text a {
+.post-text .link {
     display: flex;
     justify-content: flex-end;
     color: #3A4F9A;
@@ -158,6 +174,12 @@ nav{
     line-height: 20px;
     letter-spacing: 1.3px;
     margin: auto 18px 2px auto;
+    transition: all ease 0.5s;
     
+}
+
+.post-text a:hover{
+ color:#e44848;
+ 
 }
 

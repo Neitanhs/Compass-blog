@@ -3,7 +3,7 @@ var posts = [
     {
         id: 1,
         title: "Spider-Man: Across the Spider-Verse",
-        imageUrl: "/Compass-blog/img/Spider.jpg",
+        imageUrl: "/img/Spider.jpg",
         body: "Spider-Man: Across the Spider-Verse is the highly anticipated sequel to the animated superhero film. Continuing the story of Miles Morales, it delves deeper into the multiverse, as he encounters new versions of Spider-Man. With stunning visuals, thrilling action, and an exploration of identity and responsibility, the film promises to be an exciting and groundbreaking addition to the Spider-Verse franchise."
     }
 ];
@@ -35,8 +35,8 @@ function renderPost(postId) {
     const postComments = comments.filter((comment) => comment.postId === postId);
   
     const postHTML = `
-    <a href="/Compass-blog/Post/index.html"  class="arrow-img">
-    <img src="/Compass-blog/img/ArrowIcon.svg" alt="arrow">
+    <a href="/Post/index.html"  class="arrow-img">
+    <img src="/img/ArrowIcon.svg" alt="arrow">
    </a>    
   <div class="post">
         <div class="images-post">

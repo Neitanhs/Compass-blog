@@ -3,7 +3,7 @@ var posts = [
     {
         id: 2,
         title: "Django Unchained",
-        imageUrl: "/Compass-blog/img/Django.jpg",
+        imageUrl: "/img/Django.jpg",
         body: "Django Unchained is a Quentin Tarantino masterpiece, a gripping blend of Western and revenge thriller. Set in the pre-Civil War era, it follows Django, a freed slave turned bounty hunter, on a mission to rescue his wife from a sadistic plantation owner. With stellar performances and a compelling storyline, it's a must-watch film."
     }
 ];
@@ -42,8 +42,8 @@ function renderPost(postId) {
     const postComments = comments.filter((comment) => comment.postId === postId);
   
     const postHTML =`
-    <a href="/Compass-blog/Post/index.html"  class="arrow-img">
-    <img src="/Compass-blog/img/ArrowIcon.png" alt="arrow">
+    <a href="/Post/index.html"  class="arrow-img">
+    <img src="/img/ArrowIcon.svg" alt="arrow">
    </a>    
   <div class="post">
         <div class="images-post">

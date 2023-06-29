@@ -3,37 +3,37 @@ var posts = [
     {
         id: 1,
         title: "Spider-Man: Across the Spider-Verse",
-        imageUrl: "/Compass-blog/img/Spider.jpg",
+        imageUrl: "/img/Spider.jpg",
         body: "Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence. When the heroes clash on how to handle a new threat, Miles must redefine what it means to be a hero."
     },
     {
         id: 2,
         title: "Django Unchained",
-        imageUrl: "/Compass-blog/img/Django.jpg",
+        imageUrl: "/img/Django.jpg",
         body: "Django Unchained is a Quentin Tarantino masterpiece, a gripping blend of Western and revenge thriller. Set in the pre-Civil War era, it follows Django, a freed slave turned bounty hunter, on a mission to rescue his wife from a sadistic plantation owner. With stellar performances and a compelling storyline, it's a must-watch film"
     },
     {
         id: 3,
         title: "Interstellar",
-        imageUrl: "/Compass-blog/img/Interstellar.jpg",
+        imageUrl: "/img/Interstellar.jpg",
         body: "Interstellar is a mind-bending sci-fi epic directed by Christopher Nolan. It explores a near-future Earth facing an agricultural crisis and follows a group of astronauts who embark on a daring mission through a wormhole to find a new habitable planet. With stunning visuals and an emotionally charged narrative, it takes audiences on an awe-inspiring journey through space and time."
     },
     {
         id: 4,
         title: "Spirited Away",
-        imageUrl: "/Compass-blog/img/Chihiro.webp",
+        imageUrl: "/img/Chihiro.webp",
         body: "Spirited Away is a captivating Japanese animated film by Hayao Miyazaki. It tells the enchanting story of Chihiro, a young girl who stumbles upon a magical world inhabited by spirits and creatures. Through her bravery and resilience, Chihiro must navigate this realm to save her parents and find her way back home. With breathtaking animation and a profound exploration of identity and courage, Spirited Away is a timeless masterpiece that captures the imagination of both children and adults alike."
     },
     {
         id: 5,
         title: "The Matrix",
-        imageUrl: "/Compass-blog/img/Matrix.jpg",
+        imageUrl: "/img/Matrix.jpg",
         body: "The Matrix is a groundbreaking science fiction film directed by the Wachowskis. It introduces us to a dystopian world where humans are unknowingly trapped in a simulated reality controlled by machines. Neo, a computer hacker, becomes the chosen one who fights to free humanity. With mind-bending visuals and philosophical themes, The Matrix redefined the sci-fi genre."
     },
     {
         id: 6,
         title: "Pulp Fiction",
-        imageUrl: "/Compass-blog/img/pulp fiction.png",
+        imageUrl: "/img/pulp fiction.png",
         body: "Pulp Fiction is a Quentin Tarantino cult classic, known for its nonlinear storytelling and gritty dialogue. The film weaves interconnected stories of hitmen, boxers, and mobsters in Los Angeles. With a stellar ensemble cast and Tarantino's signature style, Pulp Fiction is an edgy and unforgettable cinematic experience."
     },
 ];
@@ -164,14 +164,16 @@ function renderPosts() {
       postHTML += `
     <div class="post">
         <div class="images-post">
-        <a href="/Compass-blog/Post details/Post_${post.id}/post-details-${post.id}.html">
+        <a href="/Post details/Post_${post.id}/post-details-${post.id}.html">
           <img src="${post.imageUrl}" alt="${post.title}" />
           </a>
-       </div>
+       </div>       
     <div class="post-text">
+        <a href="/Post details/Post_${post.id}/post-details-${post.id}.html">
           <h3>${post.title}</h3>          
           <p>${post.body}</p>
-          <a href="/Compass-blog/Post details/Post_${post.id}/post-details-${post.id}.html">Expand...</a>
+          <a class="link" href="/Post details/Post_${post.id}/post-details-${post.id}.html">Expand...</a>
+        </a>
     </div>     
         </div>
       `;
