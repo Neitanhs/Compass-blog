@@ -1,33 +1,4 @@
-"use strict";
-var posts = [
-    {
-        id: 1,
-        title: "Spider-Man: Across the Spider-Verse",
-        imageUrl: "/img/Spider.jpg",
-        body: "Spider-Man: Across the Spider-Verse is the highly anticipated sequel to the animated superhero film. Continuing the story of Miles Morales, it delves deeper into the multiverse, as he encounters new versions of Spider-Man. With stunning visuals, thrilling action, and an exploration of identity and responsibility, the film promises to be an exciting and groundbreaking addition to the Spider-Verse franchise."
-    }
-];
-var comments = [
-    /* Post-details 1 */
-    {
-        id: 1,
-        postId: 1,
-        email: "Leo_Buhring@gmail.com",
-        body: "Awesome movie! Loved the animation and storyline. Can't wait for the sequel!"
-    },
-    {
-        id: 2,
-        postId: 1,
-        email: "mariagotic@gmail.com",
-        body: "The visuals were mind-blowing! Spider-Verse is a game-changer."
-    },
-    {
-        id: 3,
-        postId: 1,
-        email: "pedro_00@gmail.com",
-        body: "Incredible film! The music and characters were absolutely fantastic."
-    }
-];
+import {posts, comments} from '/Post/data/data.js'
 
 function renderPost(postId) {
     const post = posts.find((post) => post.id === postId); 
