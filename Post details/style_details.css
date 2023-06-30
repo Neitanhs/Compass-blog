@@ -1,3 +1,16 @@
+:root {
+    --primary: #32325D;
+    --title: #3A4F9A;
+    --nav-text: #ffffff;
+    --scrollbar-background: #ffffff;  
+    --scrollbar-thumb-background: rgba(58, 79, 154, 0.30);
+    --scrollbar-thumb-active:rgba(58, 79, 154, 0.5);
+    --post-background:#ffffff;
+    --text-link-hover:#e44848;
+    --text: #575757;    
+  }
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -13,19 +26,13 @@ ul{
     list-style: none;
 }
 
-body {    
-     margin: 0px;
-     padding: 0px;
-     font-family: Inter, sans-serif;         
-}
-
 /* NAVBAR */
 
 header{       
     position: fixed;
     top: 0;
     width: 100%;   
-    background-color: #32325D;
+    background-color: var(--primary);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
 }
 
@@ -34,12 +41,11 @@ nav{
     display: flex;    
     align-items: center;    
     padding: 1em 5em;
-    gap: 8px;    
-    color: white;  
-    
+    gap: 8px;   
 }
 
-.text-nav{    
+.text-nav{
+    color: var(--nav-text); 
     font-size: 24px;
     font-weight: 600;
 }
@@ -50,18 +56,17 @@ nav{
 /* ScrollBar */
 
 ::-webkit-scrollbar{    
-    color: white;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+    background-color:var(--scrollbar-background);   
     
  }
 
  ::-webkit-scrollbar-thumb {
      border-radius: 4px;
-     background: rgba(58, 79, 154, 0.30);
+     background:var(--scrollbar-thumb-background)
      
  }
  ::-webkit-scrollbar-thumb:active {    
-    background: rgba(58, 79, 154, 0.5);
+    background:var(--scrollbar-thumb-active)
     
 }
  
@@ -86,9 +91,9 @@ nav{
 }
 
 .post{
-    width: 771px;    
+    width: 48em;    
     border-radius: 8px;
-    background: #FFF;
+    background: var(--post-background);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
     margin-top: 82px;
     margin: 82px auto 0 auto;
@@ -97,24 +102,17 @@ nav{
 
 .arrow-img {
     position: absolute;
-    top:82px;
-    left: 34px; 
+    top:5em;
+    left: 2em; 
     border-radius: 75px;
     border: 0.3px solid rgba(255, 255, 255, 0.60);
-    background: #32325D;
+    background: var(--primary);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 13px;
-    margin: 200px px 0 0;  
+    padding: 0.8em;    
     transition: 0.5s all ease; 
 }
 .arrow-img:hover{
-    background-color: #e44848;
-
-}
-
-.images-post{    
-    width: 100%;
-    height: 100%;  
+    background-color: var(--text-link-hover);
 }
 
 .images-post img{
@@ -127,8 +125,7 @@ nav{
 
 .post-text h3{
     color: #3A4F9A;
-    font-size: 20px;
-    font-family: Inter;
+    font-size: 20px;    
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 2px;
@@ -137,8 +134,7 @@ nav{
 
 .post-text p{
     color: #575757;
-    font-size: 13px;
-    font-family: Inter;
+    font-size: 13px;    
     font-weight: 300;
     line-height: 20px;
     letter-spacing: 1.3px;
@@ -148,9 +144,9 @@ nav{
 .comments-box{
     justify-content: center;    
     height: auto;
-    width: 771px;    
+    width: 48em;    
     border-radius: 8px;
-    background: #FFF;
+    background: var(--post-background);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
     margin: 82px auto 50px auto;
     padding-bottom: 30px;
@@ -163,8 +159,7 @@ nav{
 .comments-text{
     border-bottom: solid 1px #979797;
     color: #575757;
-    font-size: 16px;
-    font-family: Inter;
+    font-size: 16px;    
     font-weight: 200;
     line-height: 20px;
     letter-spacing: 1.3px;    
@@ -174,8 +169,7 @@ nav{
 
 .comments-text Strong {
     color: #3A4F9A;
-    font-size: 16px;
-    font-family: Inter;
+    font-size: 16px;    
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
