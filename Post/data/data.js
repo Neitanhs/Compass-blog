@@ -4,7 +4,7 @@ export var posts = [
         id: 1,
         title: "Spider-Man: Across the Spider-Verse",
         imageUrl: "/img/Spider.jpg",
-        body: "Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence. When the heroes clash on how to handle a new threat, Miles must redefine what it means to be a hero."
+        body: "In Spider-Man: Across the Spider-Verse, Miles Morales, the Spider-Man from an alternate universe, embarks on a new adventure that takes him across different dimensions. He reunites with Gwen Stacy, a.k.a. Spider-Gwen, and together they face new threats while discovering more about the multiverse. This highly anticipated animated film continues the story of the critically acclaimed Spider-Man: Into the Spider-Verse."
     },
     {
         id: 2,
@@ -42,7 +42,7 @@ export var comments = [
     {
         id: 1,
         postId: 1,
-        email: "Leo_Buhring@gmail.com",
+        email: "leo_Buhring@gmail.com",
         body: "Awesome movie! Loved the animation and storyline. Can't wait for the sequel!"
     },
     {
@@ -99,13 +99,13 @@ export var comments = [
     {
         id: 1,
         postId: 4,
-        email: "isabella@gmail.com",
+        email: "isabella_uchiha@gmail.com",
         body: "Spirited Away is a magical masterpiece! It transported me to a whole new world."
     },
     {
         id: 2,
         postId: 4,
-        email: "lucas@gmail.com",
+        email: "luquinhasotaku2@gmail.com",
         body: "A beautiful and enchanting film! Spirited Away captured my heart."
     },
     {

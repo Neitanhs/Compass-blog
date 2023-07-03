@@ -1,5 +1,7 @@
 import {posts} from '/Post/data/data.js'
 
+/* Função para renderizar o HTML com espaços preenchidos pelas informações no DATA */
+
 function renderPosts() {
     const postsContainer = document.getElementById('posts-container');
     let postHTML = '';  

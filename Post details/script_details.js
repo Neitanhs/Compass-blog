@@ -26,7 +26,7 @@ function renderSinglePost() {
 
   <div class="comments-box">        
         <ul>
-          ${postComments.map((comment) => `<li class="comments-text"><Strong>usuário_${comment.id} :${comment.email} : </Strong> ${comment.body}</li>`).join('')}
+          ${postComments.map((comment) => `<li class="comments-text"><Strong>${comment.email.split("@")[0]} : ${comment.email} : </Strong> ${comment.body}</li>`).join('')}
         </ul>
   </div>
     `;
