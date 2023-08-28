@@ -1,6 +1,7 @@
 # 🌟COMPASS CHALLENGE-01 🌟
 
-This challenge consists of building a user registration, login, and profile management system using React, TypeScript, Firebase Authentication, Axios, and JSON Server. Users can register, log in, view their profile details, and edit their profile information.
+This challenge consists of creating a blog with multiple posts, where users will be directed to the post details when they click on them.
+
 
 ## 🚀 Features 
 
